@@ -56,10 +56,10 @@
             }
         </style>
     </head>
-    <body background="http://localhost/Garage/resources/views/img/fondo8.jpeg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
+    <body background="http://localhost/barespel/resources/views/img/fondo8.jpeg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
     <nav class="navbar navbar-expand-lg   sticky-top navbar-light bg-light">
 
-  <img src="http://localhost/Garage/resources/views/img/sello2.png"  width="40" height="40" class="d-inline-block align-top" alt="">
+  <img src="http://localhost/barespel/resources/views/img/sello2.png"  width="40" height="40" class="d-inline-block align-top" alt="">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -106,10 +106,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="http://localhost/Garage/resources/views/img/belisario.jpg" class="d-block w-75" alt="...">
+      <img src="http://localhost/barespel/resources/views/img/belisario.jpg" class="d-block w-75" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="http://localhost/Garage/resources/views/img/matriz.jpg" class="d-block w-100" alt="...">
+      <img src="http://localhost/barespel/resources/views/img/matriz.jpg" class="d-block w-100" alt="...">
     </div>
     
   </div>
@@ -154,9 +154,7 @@
                          <td><p class="card-text">{{$menu->bar->nombre}} </p></td>  
                          <td><p class="card-text">{{$menu->nombre}}</p></td>  
                          <td><p class="card-text">{{$menu->precio}}$</p></td> 
-                         <br>
-                                    
-                            
+                         <br> 
                      </tr>
                      @endforeach
                      </tbody>
@@ -167,7 +165,8 @@
   <thead class="table-primary">
                         <tr>                           
                             
-                           
+                        <td>CAMPUS</td>
+                            <td>BAR</td>
                             <td>NOMBRE</td>                            
                             <td>PRECIO</td>
 
@@ -176,13 +175,16 @@
                     </thead>
                     <tbody class="table-success">
                     @foreach($snacks as $snack)
-                    <tr>    
-                                          
-                         <td><p class="card-text">{{$snack->nombre}} </p></td>  
-                         <td><p class="card-text">{{$snack->precio}}$</p></td> 
-                         <br>
-  
-                     </tr>
+                    <tr>                          
+                         
+                         <td><p class="card-text">{{$snack->bar->campus->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->bar->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->precio}}$</p></td> 
+                          <br>
+                                     
+                             
+                      </tr>
                      @endforeach
                      </tbody>
   </table>
