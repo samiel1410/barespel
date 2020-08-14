@@ -60,7 +60,7 @@
             <tr>
                 <th>&nbsp;</th>
                                 
-                                                <td>Nombre</td>
+                                                <td>Nombred</td>
                 
                                                 <td>Direccion</td>
                 
