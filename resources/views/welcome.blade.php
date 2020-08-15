@@ -132,14 +132,72 @@
 <br><br>
                 <div class="container" style="background-color: rgb(238, 238, 238);">
   <div class="row">
-    <div class="col display-3 font-weight-bold">Menus</div>
-    <div class="col display-3 font-weight-bold">Snacks</div>
+  
     <div class="w-100"></div>
-    <div class="col card"><div class="table-responsive">
+    <div class="col-sm card"><div class="table-responsive">
   <table class="table" > 
+  <h1 class=" display-3 font-weight-bold border">Menus</h1>
   <thead class="table-primary" >
                         <tr>                           
                             <td>CAMPUS</td>
+                            
+                            <td>NOMBRE</td>                            
+                            <td>PRECIO</td>
+
+                        </tr>
+
+                    </thead>
+                    <tbody class="table-success">
+                    <h1>Bar 1</h1>
+                    @foreach($menus as $menu)
+                    
+                    @if($menu->bar->nombre == "Bar 1")
+                    <tr>                          
+                         <td><p class="card-text">{{$menu->bar->campus->nombre}} </p></td>  
+                         
+                         <td><p class="card-text">{{$menu->nombre}}</p></td>  
+                         <td><p class="card-text">{{$menu->precio}}$</p></td> 
+                         <br> 
+                     </tr>
+                     @endif
+                     @endforeach
+                     </tbody>
+                     <table class="table" > 
+  
+  <thead class="table-primary" >
+                        <tr>                           
+                            <td>CAMPUS</td>
+                            
+                            <td>NOMBRE</td>                            
+                            <td>PRECIO</td>
+
+                        </tr>
+
+                    </thead>
+                    <tbody class="table-success">
+                    <h1>Bar 2</h1>
+                    @foreach($menus as $menu)
+                    @if($menu->bar->nombre == "Bar 2")
+                    <tr>                          
+                         <td><p class="card-text">{{$menu->bar->campus->nombre}} </p></td>  
+                         
+                         <td><p class="card-text">{{$menu->nombre}}</p></td>  
+                         <td><p class="card-text">{{$menu->precio}}$</p></td> 
+                         <br> 
+                     </tr>
+                     @endif
+                     @endforeach
+                     </tbody>
+  </table>
+  </table>
+</div></div>
+    <div class="col-sm card"><div class="table-responsive">
+  <table class="table">
+  <h1 class=" display-3 font-weight-bold border">Snacks</h1>
+  <thead class="table-primary">
+                        <tr>                           
+                            
+                        <td>CAMPUS</td>
                             <td>BAR</td>
                             <td>NOMBRE</td>                            
                             <td>PRECIO</td>
@@ -148,19 +206,44 @@
 
                     </thead>
                     <tbody class="table-success">
-                    @foreach($menus as $menu)
+                   
+        
+   
+                    @foreach($snacks as $snack)
+                    
+                    
                     <tr>                          
-                         <td><p class="card-text">{{$menu->bar->campus->nombre}} </p></td>  
-                         <td><p class="card-text">{{$menu->bar->nombre}} </p></td>  
-                         <td><p class="card-text">{{$menu->nombre}}</p></td>  
-                         <td><p class="card-text">{{$menu->precio}}$</p></td> 
-                         <br> 
-                     </tr>
+                         <td><p class="card-text">{{$snack->bar->campus->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->bar->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->nombre}} </p></td>  
+                          <td><p class="card-text">{{$snack->precio}}$</p></td> 
+                          <br>
+                                 
+                      </tr>
+                      
                      @endforeach
+                     
                      </tbody>
+                      
+                     
   </table>
-</div></div>
-    <div class="col card"><div class="table-responsive">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Ver mas..
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Snacks</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="col card"><div class="table-responsive">
   <table class="table">
   <thead class="table-primary">
                         <tr>                           
@@ -185,9 +268,19 @@
                                      
                              
                       </tr>
+                      
                      @endforeach
                      </tbody>
+                     
   </table>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div></div>
   </div>
 </div>
