@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<body background="http://localhost/Garage/resources/views/img/fondo2.jpg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
+<body background="http://localhost/Garbarespelage/resources/views/img/fondo2.jpg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
 <div class="container">
 
     @if(session('status'))

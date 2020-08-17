@@ -151,7 +151,7 @@
                     <h1>Bar 1</h1>
                     @foreach($menus as $menu)
                     
-                    @if($menu->bar->nombre == "Bar 1")
+                    @if($menu->bar->nombre == "Bar 1" )
                     <tr>                          
                          <td><p class="card-text">{{$menu->bar->campus->nombre}} </p></td>  
                          
@@ -207,9 +207,12 @@
                     </thead>
                     <tbody class="table-success">
                    
-        
+                    <?php $count = 0;?>                
+                   
    
                     @foreach($snacks as $snack)
+                    @if($count< 4)
+                    
                     
                     
                     <tr>                          
@@ -220,6 +223,9 @@
                           <br>
                                  
                       </tr>
+                      @endif
+                      <?php $count++;?> 
+                      
                       
                      @endforeach
                      
@@ -233,16 +239,16 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content" >
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Snacks</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" >
       <div class="col card"><div class="table-responsive">
   <table class="table">
   <thead class="table-primary">
@@ -258,16 +264,18 @@
                     </thead>
                     <tbody class="table-success">
                     @foreach($snacks as $snack)
+                    <tr> 
+                   
                     <tr>                          
-                         
                          <td><p class="card-text">{{$snack->bar->campus->nombre}} </p></td>  
                           <td><p class="card-text">{{$snack->bar->nombre}} </p></td>  
                           <td><p class="card-text">{{$snack->nombre}} </p></td>  
                           <td><p class="card-text">{{$snack->precio}}$</p></td> 
                           <br>
-                                     
+                     
                              
                       </tr>
+               
                       
                      @endforeach
                      </tbody>
@@ -290,6 +298,7 @@
            
             
         </div>
+        <footer style="background-color: rgb(238, 238, 238);"><h1>dsadasdas</h1></footer>
         
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
