@@ -28,7 +28,7 @@
     
   </div>
 </nav>
-<body background="http://localhost/Garage/resources/views/img/fondo2.jpg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
+<body background="http://localhost/barespel/resources/views/img/fondo2.jpg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
 @extends('layouts.app')
 @section('content')
 <div class="container">

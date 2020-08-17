@@ -56,8 +56,9 @@
             }
         </style>
     </head>
-    <body background="http://localhost/barespel/resources/views/img/fondo8.jpeg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
-    <nav class="navbar navbar-expand-lg   sticky-top navbar-light bg-light">
+   
+    <body style="background-color: rgb(234, 234, 234)" >
+    <nav class="navbar navbar-expand-lg   sticky-top navbar-light bg-light" >
 
   <img src="http://localhost/barespel/resources/views/img/sello2.png"  width="40" height="40" class="d-inline-block align-top" alt="">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,49 +95,48 @@
   </div>
 </nav>
 <br> <br> 
-<div class="content" >
-                <div class="title m-b-md font-weight-bold">
-                    Bar Espel
-                </div>
-
-                <div class="container">
-  <div class="row">
-    <div class="col " style="background-color: rgb(238, 238, 238);"> lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis cumque in ipsam voluptatibus placeat omnis debitis veniam, magni obcaecati voluptas quidem fugiat impedit quis molestiae soluta perspiciatis, eum velit.</div>
-    <div class="col">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div class="content"  style="background-color: rgb(234, 234, 234)">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="http://localhost/barespel/resources/views/img/belisario.jpg" class="d-block w-75" alt="...">
+      <img class="d-block w-100" src="http://localhost/barespel/resources/views/img/belisario22.png" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img src="http://localhost/barespel/resources/views/img/matriz.jpg" class="d-block w-100" alt="...">
+      <img class="d-block w-100" src="http://localhost/barespel/resources/views/img/matrizespe.png" alt="Second slide">
     </div>
-    
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
     
     
-    
+  
     
     </div>
   </div>
-</div>
-<br><br>
-                <div class="container" style="background-color: rgb(238, 238, 238);">
-  <div class="row">
+  <br><br>
+  <div class="container"  >
+  <div class="row" >
   
     <div class="w-100"></div>
-    <div class="col-sm card"><div class="table-responsive">
+    <div class="col-sm card" ><div class="table-responsive">
   <table class="table" > 
-  <h1 class=" display-3 font-weight-bold border">Menus</h1>
+  <h1 class=" display-3 font-weight-bold border text-center">Menus</h1>
   <thead class="table-primary" >
                         <tr>                           
                             <td>CAMPUS</td>
@@ -191,9 +191,9 @@
   </table>
   </table>
 </div></div>
-    <div class="col-sm card"><div class="table-responsive">
+    <div class="col-sm card" ><div class="table-responsive">
   <table class="table">
-  <h1 class=" display-3 font-weight-bold border">Snacks</h1>
+  <h1 class=" display-3 font-weight-bold border text-center">Snacks</h1>
   <thead class="table-primary">
                         <tr>                           
                             
@@ -234,9 +234,16 @@
                      
   </table>
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <div class="container">
+  <div class="row">
+    <div class="col text-center">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Ver mas..
 </button>
+    </div>
+  </div>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -293,12 +300,54 @@
   </div>
 </div>
 
-        
-        
-           
+  
             
         </div>
-        <footer style="background-color: rgb(238, 238, 238);"><h1>dsadasdas</h1></footer>
+  
+</div>
+<br><br>
+<!-- imagen -->
+<div><img src="http://localhost/barespel/resources/views/img/barra2.png"  class="img-fluid" alt="vcvbcbv"></div>
+<br>
+               
+       <div style="background-color: white">
+       <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost/barespel/resources/views/img/snack22.jpg" width="20px"  height="165px" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Snacks</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost/barespel/resources/views/img/comida.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Menus</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Bar Espel</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+       
+       
+       </div>
         
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
