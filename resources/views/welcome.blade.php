@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -62,7 +63,7 @@
 
     <nav class="navbar navbar-expand-lg   sticky-top navbar-light bg-light">
 
-        <img src="http://localhost/barespel/resources/views/img/sello2.png" width="40" height="40"
+        <img src="http://localhost/barespel/resources/views/img/icon.png" width="40" height="40"
             class="d-inline-block align-top" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,8 +78,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('preferencias.index')}}">Preferencias</a>
-                </li>
-                <li>
+                
                     <form class="form-inline my-2 my-lg-0">
                         @if (Route::has('login'))
                         <div class="top-right links">
@@ -134,6 +134,7 @@
             </a>
         </div>
     </div>
+    
 
 
 
@@ -142,6 +143,7 @@
     </div>
     <br><br>
     <div class="container">
+    
         <div class="row">
 
             <div class="w-100"></div>
@@ -340,51 +342,93 @@
     </div>
 
     </div>
+    
     <br><br>
+    
     <!-- imagen -->
-    <div><img src="http://localhost/barespel/resources/views/img/barra2.png" class="img-fluid" alt="vcvbcbv"></div>
+    <div><img src="http://localhost/barespel/resources/views/img/barra2.png" class="img-fluid"  width="100%" alt="vcvbcbv"></div>
     <br>
 
-    <div style="background-color: white">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="http://localhost/barespel/resources/views/img/snack22.jpg"
-                            width="20px" height="165px" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Snacks</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+    <div style="background-color: white,justify-contentcenter " >
+       <!-- Topic Cards -->
+      
 
+<div class="container">
+  <div class="row">
+  <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="http://localhost/barespel/resources/views/img/snack22.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+      <div class="card">
+      <div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3654870"><span style="color:gray;">Hora actual en</span><br />Latacunga, Ecuador</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=large&timezone=America%2FGuayaquil" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+        
+      </div>
+    </div>
+    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="http://localhost/barespel/resources/views/img/icon.png" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
+           <!-- Button trigger modal -->
+           <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal2">
+                                    Ver mas..
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="http://localhost/barespel/resources/views/img/comida.jpg"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Menus</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Bar Espel</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Snacks</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col card">
+                                        <!-- Card -->
 
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+    </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
 
 
     </div>
@@ -400,3 +444,93 @@
 </body>
 
 </html>
+<style>
+/*----  Main Style  ----*/
+.card-wrapper {
+  margin-bottom: 30px;
+}
+.card-image .card .card-img-wrapper {
+  height: 100%;
+}
+.card-image .card .card-body {
+  display: none;
+}
+.card-image-title-description .card .card-img-wrapper {
+  max-height: 160px;
+}
+.card-image-title-description .card {
+  position: relative;
+  min-height: 300px;
+}
+.card-image-title-description .card .card-body {
+  height: auto;
+  position: relative;
+  top: 0;
+  margin-bottom: -70px;
+}
+.card-image-title-description .card:hover .card-body {
+  top: -70px;
+}
+.card-image-title-description .card .card-body .card-title {
+  margin-bottom: .75rem;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  height: 100%;
+}
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+.card-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+.card-img-wrapper img {
+  transition: 1.5s ease;
+}
+.card:hover .card-img-wrapper img {
+  transform: scale(1.15);
+}
+.card-body .card-title {
+  margin-bottom: calc(50% + 20px);
+  transition: 1.5s ease;
+}
+.card:hover .card-body .card-title {
+  margin-bottom: .75rem;
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #fff;
+  transition: 1.5s ease;
+}
+.card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
+}
+.card:hover .card-body {
+  height: 80%;
+}
+.card:hover .card-content {
+  bottom: 0;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+}
+
+</style>
