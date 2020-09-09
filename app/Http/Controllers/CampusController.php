@@ -15,8 +15,9 @@ class CampusController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        $request->user()->authorizeRoles('admin');
         $campuses = Campus::all();
         return view('campuses.index', compact('campuses'));
     }
