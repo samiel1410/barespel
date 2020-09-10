@@ -54,7 +54,7 @@ class BarController extends Controller
     }
 
     public function destroy(Request $request, Bar $bar)
-    {   $this->authorize('haveaccess','bars.create');
+    {   $this->authorize('haveaccess','bars.destroy');
         $bar->delete();
         return redirect()->route('bars.index')->with('status', 'Registro Eliminado Exitosamente...!');
     }

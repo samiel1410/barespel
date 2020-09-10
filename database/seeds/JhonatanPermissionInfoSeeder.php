@@ -24,9 +24,6 @@ class JhonatanPermissionInfoSeeder extends Seeder
             Permission::truncate();
             Role::truncate();
         DB::statement("SET foreign_key_checks=1");
-
-
-
         //user admin
         $useradmin= User::where('email','admin@admin.com')->first();
         if ($useradmin) {
@@ -176,14 +173,20 @@ class JhonatanPermissionInfoSeeder extends Seeder
         ]);
         $permission_all[] = $permission->id;
         $permission = Permission::create([
-            'name' => 'Show bars',
-            'slug' => 'bars.show',
+            'name' => 'Create bars',
+            'slug' => 'bars.create',
             'description' => 'A user can see bars',
         ]);
         $permission_all[] = $permission->id;
         $permission = Permission::create([
-            'name' => 'Show bars',
-            'slug' => 'bars.show',
+            'name' => 'Edit bars',
+            'slug' => 'bars.edit',
+            'description' => 'A user can see bars',
+        ]);
+        $permission_all[] = $permission->id;
+        $permission = Permission::create([
+            'name' => 'Destroy bars',
+            'slug' => 'bars.destroy',
             'description' => 'A user can see bars',
         ]);
         $permission_all[] = $permission->id;
