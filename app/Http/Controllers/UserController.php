@@ -3,53 +3,118 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\UserPostRequest;
+use App\JhonatanPermission\Models\Role;
 use App\User;
-
 
 class UserController extends Controller
 {
-    
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $users = User::all();
-        return view('users.index', compact('users'));
+        $this->authorize('haveaccess','user.index');
+        $users =  User::with('roles')->orderBy('id','Desc')->paginate(2);
+        //return $users; 
+
+        return view('user.index',compact('users'));
     }
 
-    public function show(Request $request, User $user)
-    {
-        return view('users.show', compact('user'));
-    }
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return view('users.create');
+        //$this->authorize('create', User::class);
+        //return 'Create';
     }
 
-    public function store(UserPostRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        $data = $request->validated();
-        $user = User::create($data);
-        return redirect()->route('users.index')->with('status', 'Registro Creado Exitosamente...!');
+        //
     }
 
-    public function edit(Request $request, User $user)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(User $user)
     {
-        return view('users.edit', compact('user'));
+        $this->authorize('view', [$user, ['user.show','userown.show'] ]);
+        $roles= Role::orderBy('name')->get();
+
+        //return $roles;
+
+        return view('user.view', compact('roles', 'user'));
     }
 
-    public function update(UserPostRequest $request, User $user)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user)
     {
-        $data = $request->validated();
-        $user->fill($data);
-        $user->save();
-        return redirect()->route('users.index')->with('status', 'Registro Actualizado Exitosamente...!');
+        $this->authorize('update', [$user, ['user.edit','userown.edit'] ]);
+        $roles= Role::orderBy('name')->get();
+
+        //return $roles;
+
+        return view('user.edit', compact('roles', 'user'));
     }
 
-    public function destroy(Request $request, User $user)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name'          => 'required|max:50|unique:users,name,'.$user->id,
+            'email'         => 'required|max:50|unique:users,email,'.$user->id            
+        ]);
+
+        //dd($request->all());
+
+        $user->update($request->all());
+
+        $user->roles()->sync($request->get('roles'));
+        
+        return redirect()->route('user.index')
+            ->with('status_success','User updated successfully'); 
+
+
+
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
+    {
+        $this->authorize('haveaccess','user.destroy');
         $user->delete();
-        return redirect()->route('users.index')->with('status', 'Registro Eliminado Exitosamente...!');
+
+        return redirect()->route('user.index')
+            ->with('status_success','User successfully removed'); 
     }
 }

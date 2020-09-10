@@ -18,28 +18,30 @@ class BarController extends Controller
     public function index()
     {
         $bars = Bar::all();
+        $this->authorize('haveaccess','bars.index');
         return view('bars.index', compact('bars'));
     }
 
     public function show(Request $request, Bar $bar)
-    {
+    {    $this->authorize('haveaccess','bars.show');
         return view('bars.show', compact('bar'));
     }
 
     public function create()
     {
+        $this->authorize('haveaccess','bars.create');
         return view('bars.create');
     }
 
     public function store(BarPostRequest $request)
-    {
+    {    $this->authorize('haveaccess','bars.create');
         $data = $request->validated();
         $bar = Bar::create($data);
         return redirect()->route('bars.index')->with('status', 'Registro Creado Exitosamente...!');
     }
 
     public function edit(Request $request, Bar $bar)
-    {
+    {   $this->authorize('haveaccess','bars.edit');
         return view('bars.edit', compact('bar'));
     }
 
@@ -52,7 +54,7 @@ class BarController extends Controller
     }
 
     public function destroy(Request $request, Bar $bar)
-    {
+    {   $this->authorize('haveaccess','bars.create');
         $bar->delete();
         return redirect()->route('bars.index')->with('status', 'Registro Eliminado Exitosamente...!');
     }

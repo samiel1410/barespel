@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\User;
+use App\JhonatanPermission\Models\Role;
+use App\JhonatanPermission\Models\Permission;
+use Illuminate\Support\Facades\Gate;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +37,7 @@ Route::resource('snacks', 'SnackController');
 Route::resource('menus', 'MenuController');
 Route::resource('buzons', 'BuzonController');
 Route::resource('preferencias', 'PreferenciaController');
+Route::resource('/role', 'RoleController')->names('role');
+
+Route::resource('/user', 'UserController', ['except'=>[
+    'create','store']])->names('user');
