@@ -17,7 +17,9 @@
                     </div>
                     <div class="col-4" style="text-align:right;padding-right:35px">
                         <a href="{{ url('home')}}" class="btn btn-secondary">Regresar</a>
+                        @can('haveaccess','bars.create')
                         <a href="{{route('bars.create')}}" class="btn btn-success">Nuevo</a>
+                        @endcan
                     </div>
                 </div>
                 </>
@@ -34,9 +36,6 @@
                                 <td><b>Nombre</td>
 
                                 <td><b>Abierto</td>
-
-
-
 
                             </tr>
 

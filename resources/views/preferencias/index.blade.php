@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('content')
 <body background="http://localhost/barespel/resources/views/img/fondo2.jpg" style="width:100%;height:100vh;background-size:cover;background-position:center;">
@@ -22,7 +21,7 @@
                 </div>
                 <div class="col-4" style="text-align:right;padding-right:35px"> 
                 <a href="{{ url('home')}}" class="btn btn-secondary">Regresar</a>
-                    <a href="{{route('buzons.create')}}" class="btn btn-success">Nuevo</a>
+                    <a href="{{route('preferencias.create')}}" class="btn btn-success">Nuevo</a>
                 </div>
             </div>
         </>

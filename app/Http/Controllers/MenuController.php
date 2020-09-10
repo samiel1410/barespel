@@ -16,30 +16,30 @@ class MenuController extends Controller
     }
 
     public function index()
-    {
+    {   $this->authorize('haveaccess','menus.index');
         $menus = Menu::all();
         return view('menus.index', compact('menus'));
     }
 
     public function show(Request $request, Menu $menu)
-    {
+    {   $this->authorize('haveaccess','menus.show');
         return view('menus.show', compact('menu'));
     }
 
     public function create()
-    {
+    {   $this->authorize('haveaccess','menus.create');
         return view('menus.create');
     }
 
     public function store(MenuPostRequest $request)
-    {
+    {   $this->authorize('haveaccess','menus.create');
         $data = $request->validated();
         $menu = Menu::create($data);
         return redirect()->route('menus.index')->with('status', 'Registro Creado Exitosamente...!');
     }
 
     public function edit(Request $request, Menu $menu)
-    {
+    {   $this->authorize('haveaccess','menus.edit');
         return view('menus.edit', compact('menu'));
     }
 
@@ -52,7 +52,7 @@ class MenuController extends Controller
     }
 
     public function destroy(Request $request, Menu $menu)
-    {
+    {   $this->authorize('haveaccess','menus.destroy');
         $menu->delete();
         return redirect()->route('menus.index')->with('status', 'Registro Eliminado Exitosamente...!');
     }
