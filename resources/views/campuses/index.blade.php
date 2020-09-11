@@ -41,10 +41,6 @@
                                 <td>Nombred</td>
 
                                 <td>Direccion</td>
-
-
-
-
                             </tr>
 
                         </thead>
@@ -90,7 +86,7 @@
                                         @csrf
                                         @method('DELETE')
                                     </form>
-                                    @end can
+                                    @endcan
                                 </td>
                                 <td>{{$campus->nombre}}</td>
                                 <td>{{$campus->direccion}}</td>

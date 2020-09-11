@@ -1,13 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Laravel</title>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -15,34 +11,32 @@
 
     <!-- Styles -->
     <style>
+    .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
     .full-height {
         height: 100vh;
     }
-
     .flex-center {
         align-items: center;
         display: flex;
         justify-content: center;
     }
-
     .position-ref {
         position: relative;
     }
-
     .top-right {
         position: absolute;
         right: 10px;
         top: 18px;
     }
-
     .content {
         text-align: center;
     }
-
     .title {
         font-size: 84px;
     }
-
     .links>a {
         color: #636b6f;
         padding: 0 25px;
@@ -52,18 +46,19 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-
     .m-b-md {
         margin-bottom: 30px;
     }
+    .navbar {
+        background-color: rgb(54, 216, 52, 0.60);
+    }
     </style>
 </head>
-
 <body style="background-color: rgb(234, 234, 234)">
 
-    <nav class="navbar navbar-expand-lg   sticky-top navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg  fixed-top  navbar-light ">
 
-        <img src="http://localhost/barespel/resources/views/img/icon.png" width="40" height="40"
+        <img src="http://localhost/Proyecto/barespel/resources/views/img/icon.png" width="40" height="40"
             class="d-inline-block align-top" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,12 +68,12 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('buzons.index')}}">Buzon</a>
+                    <a class="nav-link" href="{{route('buzons.index')}}" style="color:white">Buzon</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('preferencias.index')}}">Preferencias</a>
-                
+                    <a class="nav-link" href="{{route('preferencias.index')}}" style="color:white">Preferencias</a>
+
                     <form class="form-inline my-2 my-lg-0">
                         @if (Route::has('login'))
                         <div class="top-right links">
@@ -100,9 +95,6 @@
 
         </div>
     </nav>
-    <br> <br>
-
-    
     <div class="content" style="background-color: rgb(234, 234, 234)">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -112,16 +104,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://localhost/barespel/resources/views/img/belisario22.png"
-                        alt="First slide">
+                    <img class="d-block w-100" src="http://localhost/Proyecto/barespel/resources/views/img/espe.jpg"
+                        alt="First slide" width="1365" height="580">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/barespel/resources/views/img/matrizespe.png"
-                        alt="Second slide">
+                    <img class="d-block w-100" src="http://localhost/Proyecto/barespel/resources/views/img/lata.jpg"
+                        alt="Second slide" width="1365" height="580">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://localhost/barespel/resources/views/img/matriz2.jpg"
-                        alt="Third slide">
+                    <img class="d-block w-100" src="http://localhost/Proyecto/barespel/resources/views/img/matriz2.jpg"
+                        alt="Third slide" width="1365" height="580">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -134,16 +126,10 @@
             </a>
         </div>
     </div>
-    
-
-
-
-
-    </div>
-    </div>
-    <br><br>
+    <br>
+    <h4 ALIGN=center><b>INFORMACIÓN</b></h4><br>
     <div class="container">
-    
+
         <div class="row">
 
             <div class="w-100"></div>
@@ -183,14 +169,11 @@
                             @endforeach
                         </tbody>
                         <table class="table">
-
                             <thead class="table-primary">
                                 <tr>
                                     <td>CAMPUS</td>
-
                                     <td>NOMBRE</td>
                                     <td>PRECIO</td>
-
                                 </tr>
 
                             </thead>
@@ -342,91 +325,107 @@
     </div>
 
     </div>
-    
+
     <br><br>
-    
+
     <!-- imagen -->
-    <div><img src="http://localhost/barespel/resources/views/img/barra2.png" class="img-fluid"  width="100%" alt="vcvbcbv"></div>
+    <div><img src="http://localhost/Proyecto/barespel/resources/views/img/barra2.png" class="img-fluid" width="100%"
+            alt="vcvbcbv"></div>
     <br>
 
-    <div style="background-color: white,justify-contentcenter " >
-       <!-- Topic Cards -->
-      
+    <div style="background-color: white,justify-contentcenter ">
+        <!-- Topic Cards -->
 
-<div class="container">
-  <div class="row">
-  <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img class="card-img-top" src="http://localhost/barespel/resources/views/img/snack22.jpg" alt="Card image cap">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
-      <div class="card">
-      <div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3654870"><span style="color:gray;">Hora actual en</span><br />Latacunga, Ecuador</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=large&timezone=America%2FGuayaquil" width="100%" height="140" frameborder="0" seamless></iframe> </div>
-        
-      </div>
-    </div>
-    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img class="card-img-top" src="http://localhost/barespel/resources/views/img/icon.png" alt="Card image cap">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.</p>
-           <!-- Button trigger modal -->
-           <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal2">
-                                    Ver mas..
-                                </button>
-                            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img-top"
+                                src="http://localhost/Proyecto/barespel/resources/views/img/snack22.jpg"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                                With supporting text below as a natural lead-in to additional content. With supporting
+                                text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
+                </div>
+                <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div style="text-align:center;padding:1em 0;">
+                            <h2><a style="text-decoration:none;"
+                                    href="https://www.zeitverschiebung.net/es/city/3654870"><span
+                                        style="color:gray;">Hora actual en</span><br />Latacunga, Ecuador</a></h2>
+                            <iframe
+                                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=large&timezone=America%2FGuayaquil"
+                                width="100%" height="140" frameborder="0" seamless></iframe>
+                        </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Snacks</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="col card">
-                                        <!-- Card -->
-
+                    </div>
+                </div>
+                <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img-top"
+                                src="http://localhost/Proyecto/barespel/resources/views/img/icon.png"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                                With supporting text below as a natural lead-in to additional content. With supporting
+                                text below as a natural lead-in to additional content.</p>
+                            <!-- Button trigger modal -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModal2">
+                                            Ver mas..
+                                        </button>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Snacks</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col card">
+                                                <!-- Card -->
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-
-    </div>
 
         </div>
-      </div>
     </div>
-    
+    </div>
+
 
 
 
@@ -447,90 +446,107 @@
 <style>
 /*----  Main Style  ----*/
 .card-wrapper {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .card-image .card .card-img-wrapper {
-  height: 100%;
+    height: 100%;
 }
+
 .card-image .card .card-body {
-  display: none;
+    display: none;
 }
+
 .card-image-title-description .card .card-img-wrapper {
-  max-height: 160px;
+    max-height: 160px;
 }
+
 .card-image-title-description .card {
-  position: relative;
-  min-height: 300px;
+    position: relative;
+    min-height: 300px;
 }
+
 .card-image-title-description .card .card-body {
-  height: auto;
-  position: relative;
-  top: 0;
-  margin-bottom: -70px;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: -70px;
 }
+
 .card-image-title-description .card:hover .card-body {
-  top: -70px;
+    top: -70px;
 }
+
 .card-image-title-description .card .card-body .card-title {
-  margin-bottom: .75rem;
+    margin-bottom: .75rem;
 }
+
 .card {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  min-height: 400px;
-  height: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    height: 100%;
 }
+
 .card:hover {
-  box-shadow: 8px 12px 31px -10px #ab98ab;
+    box-shadow: 8px 12px 31px -10px #ab98ab;
 }
+
 .card-img-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    overflow: hidden;
 }
+
 .card-img-wrapper img {
-  transition: 1.5s ease;
+    transition: 1.5s ease;
 }
+
 .card:hover .card-img-wrapper img {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
+
 .card-body .card-title {
-  margin-bottom: calc(50% + 20px);
-  transition: 1.5s ease;
+    margin-bottom: calc(50% + 20px);
+    transition: 1.5s ease;
 }
+
 .card:hover .card-body .card-title {
-  margin-bottom: .75rem;
+    margin-bottom: .75rem;
 }
 
 .card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background-color: #fff;
-  transition: 1.5s ease;
-}
-.card-content {
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  transition: 1.5s ease;
-}
-.card:hover .card-body {
-  height: 80%;
-}
-.card:hover .card-content {
-  bottom: 0;
-}
-body {
-  margin: 0;
-  background-image: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: #fff;
+    transition: 1.5s ease;
 }
 
+.card-content {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    transition: 1.5s ease;
+}
+
+.card:hover .card-body {
+    height: 80%;
+}
+
+.card:hover .card-content {
+    bottom: 0;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to right, #ECE9E6, #FFFFFF);
+}
 </style>

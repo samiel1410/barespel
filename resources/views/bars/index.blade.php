@@ -64,7 +64,7 @@
                                             </path>
                                         </svg></a>
                                     @endcan
-                                    @can('haveaccess','bars.destroyed')
+                                    @can('haveaccess','bars.destroy')
                                     <a href="javascript:void(0)" onclick="event.preventDefault();
                     document.getElementById('delete-bar-{{$bar->id}}').submit();" class="btn btn-danger">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24"
