@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Buzon extends Model
 {
-    use SoftDeletes;
+    
     protected $guarded = [];
     public function bar()
     {
