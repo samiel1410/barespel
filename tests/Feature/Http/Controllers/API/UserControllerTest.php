@@ -5,7 +5,6 @@ namespace Tests\Feature\Http\API\Controllers;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\User;
-use App\User;
 use Laravel\Passport\Passport;
 
 class UserControllerTest extends TestCase

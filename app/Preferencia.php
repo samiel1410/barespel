@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Preferencia extends Model
 {
-    use SoftDeletes;
+    
     protected $guarded = [];
     public function menu()
     {

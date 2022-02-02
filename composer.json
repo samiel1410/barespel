@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.1.3",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
@@ -22,13 +22,18 @@
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^4.1",
         "phpunit/phpunit": "^8.5",
+        "rogervila/php-sonarqube-scanner": "^1.1",
         "victoryoalli/laravel-code-generator": "^1.0"
     },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.1.3"
+        }
     },
+    
     "extra": {
         "laravel": {
             "dont-discover": []
@@ -61,5 +66,18 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+
+    "sonarRunner": {
+        "analysis": {
+          "options": {
+              
+              "login": "admin",
+              "password": "admin"
+              
+            }
+          }
+        }
+      
+    
 }

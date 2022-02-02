@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Bar extends Model
 {
-    use SoftDeletes;
+    
     protected $guarded = [];
     public function menu()
     {
